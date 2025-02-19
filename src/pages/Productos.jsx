@@ -59,6 +59,21 @@ function Productos() {
     setIsVisible(true);
   }, []);
 
+  useEffect(() => {
+    if (modalOpen) {
+    
+      document.body.style.overflow = 'hidden';
+    } else {
+
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+   
+      document.body.style.overflow = 'auto';
+    };
+  }, [modalOpen]);
+
   return (
     <div className="bg-white min-h-screen pt-16">
       <div className="max-w-screen-xl mx-auto px-4 pb-12">
