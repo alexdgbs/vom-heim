@@ -13,9 +13,6 @@ function Contact() {
             <p>
               <a href="mailto:vomheim@gmail.com">vomheim@gmail.com</a>
             </p>
-            <p>
-              +52 33 1234 5678
-            </p>
           </div>
 
 

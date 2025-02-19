@@ -25,7 +25,7 @@ function App() {
                   <div className="absolute inset-0 bg-transparent"></div> 
                   <div className="relative z-10">
                     <h1 className="text-6xl font-extrabold text-gray-700 mb-4 tracking-wide">Vom Heim</h1>
-                    <p className="text-md text-gray-700">La tienda de muebles que tu hogar necesita</p>
+                    <p className="text-md text-gray-700">Estilo que define tu esencia</p>
                     <Link to="/productos">
                       <button className="mt-6 px-6 py-2 border-2 border-gray-700 text-gray-700 text-md hover:bg-gray-700 hover:text-white transition">
                         Explorar colección
