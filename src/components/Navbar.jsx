@@ -14,10 +14,12 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-gray-800 tracking-wide">
-          <span className="bg-gray-600 bg-clip-text text-transparent">
-            VH
-          </span>
+        <div className="text-2xl font-bold tracking-wide">
+          <div className="relative">
+            <span className="font-serif border-b border-gray-600 text-gray-800">
+              VH
+            </span>
+          </div>
         </div>     
         <ul className={`hidden md:flex space-x-8 ${isMenuOpen ? 'block' : 'hidden'}`}>
           <li>
@@ -47,21 +49,24 @@ const Navbar = () => {
         </ul>
 
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
+          <button onClick={toggleMenu} className="p-1 focus:outline-none">
+            <div className="relative w-6 h-6 flex items-center justify-center">
+              <div 
+                className={`absolute w-5 h-px bg-gray-800 transform transition-transform duration-300 ${
+                  isMenuOpen ? 'rotate-45' : '-translate-y-1'
+                }`}
+              ></div>
+              <div 
+                className={`absolute w-5 h-px bg-gray-800 transition-opacity duration-300 ${
+                  isMenuOpen ? 'opacity-0' : 'opacity-100'
+                }`}
+              ></div>
+              <div 
+                className={`absolute w-5 h-px bg-gray-800 transform transition-transform duration-300 ${
+                  isMenuOpen ? '-rotate-45' : 'translate-y-1'
+                }`}
+              ></div>
+            </div>
           </button>
         </div>
       </div>
